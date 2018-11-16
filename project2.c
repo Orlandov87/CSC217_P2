@@ -7,7 +7,10 @@ int main() {
   return 0;
 }
 
-int getMyLine(char s[], int lim){
+/*
+  Returns a line of chars from standard.in
+*/
+int myGetLine(char s[], int lim){
   int c, i;
 
   i = 0;
