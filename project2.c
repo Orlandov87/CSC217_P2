@@ -1,7 +1,35 @@
 #include <stdio.h>
-#include "item.h"
+#include "item.c"
+#define MAX_LINES 1000
+#define MAX_CHARS 120
+
 
 int main() {
+
+    typedef char* String;
+
+
+
+
+    struct node *myNode;
+
+    myNode->value = 5;
+    myNode->name = "\0";
+
+    printf("%s\n", myNode->name);
+
+    //int number = myNode.value;
+    //String myName = myNode.name;
+
+    //printf("%d %s\n", number, myName);
+
+
+
+
+
+
+
+
 
     //TODO: Receive data
 
@@ -9,6 +37,13 @@ int main() {
 
     return 0;
 }
+
+/*
+struct node *addToList(struct node *p, char *w) {
+
+}
+
+
 
 int getMyLine(char s[], int lim){
     int c, i;
@@ -23,3 +58,5 @@ int getMyLine(char s[], int lim){
     s[i] = '\0';
     return i;
 }
+
+*/
