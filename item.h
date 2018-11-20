@@ -1,4 +1,11 @@
+/*
+ * Type Definitions
+ */
 typedef char* String;
+
+/*
+ * definition: of Node structure of product
+ */
 
 typedef struct node{
   int sku;
