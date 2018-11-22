@@ -1,13 +1,26 @@
-#include "project2.h"
+#include "test.h"
+#include <stdlib.h>
+
 
 int main() {
 
-    struct node *root;
+    Node *root;
 
-    root->name = "Orlando";
+    Node temp = {5, "Orlando"};
+    Node temp2 = {6, "Test"};
 
+    addNode(root, &temp);
+
+    printf("%s\n", root->name);
 
     return 0;
+}
+
+
+void addNode(Node *head, int num) {
+    if(head == NULL) {
+        head = malloc(sizeof(Node));
+    }
 }
 
 /*
