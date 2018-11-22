@@ -20,6 +20,7 @@ int main() {
 void addNode(Node *head, int num) {
     if(head == NULL) {
         head = malloc(sizeof(Node));
+
     }
 }
 
