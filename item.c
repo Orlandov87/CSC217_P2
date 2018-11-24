@@ -15,7 +15,6 @@ Node* addNode(Node* root, Node* current) {
     while(root->next != NULL) {
       temp = root->next;
     }
-    
   }
   return root;
 }

@@ -3,18 +3,18 @@
 
 int main() {
 
-    Node *root = NULL;
+    Node *head = NULL;
 
     Node temp = {5, "Orlando"};
     Node temp2 = {6, "Test"};
 
-    root = addNode(root, &temp);
+    head = addNode(head, &temp);
 
     //addNode(root, &temp);
 
-    printf("The number is: %d\n", root->sku);
-    printf("%s\n", root->name);
-    printf("%d\n",root->quantaty );
+    printf("The number is: %d\n", head->sku);
+    printf("%s\n", head->name);
+    printf("%d\n",head->quantaty );
 
     return 0;
 }
