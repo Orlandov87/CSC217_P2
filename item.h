@@ -22,9 +22,9 @@ typedef struct node{
 Node* makeNode(String);
 
 /*
- * addNode: This funciton takes in as perameter the root node and a node of data
- * to be added to the tree. If root is NULL it will make a new node and return
- * the new node as the root.
+ * addNode: This function takes in as parameter the head node and a new node.
+ * If the head node is NULL, the new node will become the head node, otherwise
+ * it will add the new node to the list.
  */
 Node* addNode(Node *root, Node *node);
 
