@@ -1,28 +1,28 @@
-#include "test.h"
-#include <stdlib.h>
+#include "project2.h"
 
 
 int main() {
 
-    Node *root;
+    Node *root = NULL;
 
     Node temp = {5, "Orlando"};
     Node temp2 = {6, "Test"};
 
-    addNode(root, &temp);
+    root = addNode(root, &temp);
 
+    //addNode(root, &temp);
+
+    printf("The number is: %d\n", root->sku);
     printf("%s\n", root->name);
+    printf("%d\n",root->quantaty );
 
     return 0;
 }
-
 
 /*
 struct node *addToList(struct node *p, char *w) {
 
 }
-
-
 
 int getMyLine(char s[], int lim){
     int c, i;
