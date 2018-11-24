@@ -29,7 +29,7 @@ Node* makeNode(String);
 Node* addNode(Node *root, Node *node);
 
 /*
- * removeNode: This fucntion takes in as parameter the root node and the node
+ * removeNode: This function takes in as parameter the root node and the node
  * to be removed. If the root is null or the data is not in the tree then
  * this functions returns NULL.
  */
