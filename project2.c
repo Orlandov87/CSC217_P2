@@ -17,13 +17,6 @@ int main() {
 }
 
 
-void addNode(Node *head, int num) {
-    if(head == NULL) {
-        head = malloc(sizeof(Node));
-
-    }
-}
-
 /*
 struct node *addToList(struct node *p, char *w) {
 
