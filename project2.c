@@ -5,6 +5,8 @@ int main() {
 
     Node *head = NULL;
 
+    int five = -1;
+
     Node temp = {5, "Orlando"};
     Node temp2 = {6, "Test"};
 
@@ -15,6 +17,11 @@ int main() {
     printf("The number is: %d\n", head->sku);
     printf("%s\n", head->name);
     printf("%d\n",head->quantaty );
+
+    char * test = "Testing this";
+
+    char *token = strtok(test, " ");
+
 
     return 0;
 }
