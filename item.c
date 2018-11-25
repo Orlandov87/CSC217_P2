@@ -18,3 +18,15 @@ Node* addNode(Node* root, Node* current) {
   }
   return root;
 }
+
+Node* createNode(String input, int length) {
+  char tempData[MAX_CHARS];
+  char* token;
+  strcpy(tempData, input);
+
+  token = strtok(tempData, " ");
+
+  Node* tempNode;
+
+  return tempNode;
+}

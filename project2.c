@@ -12,16 +12,16 @@ int main() {
 
     head = addNode(head, &temp);
 
-    //addNode(root, &temp);
-
     printf("The number is: %d\n", head->sku);
     printf("%s\n", head->name);
     printf("%d\n",head->quantaty );
 
     char * test = "Testing this";
+    char str[] = "First string";
 
-    char *token = strtok(test, " ");
+    char * str1 = strtok(str, " ");
 
+    printf("%s\n", str1);
 
     return 0;
 }

@@ -19,7 +19,7 @@ typedef struct node{
  * makeNode: This function takes in a line of input and converts it and inputs
  * the data in a node. Then it returns a pointer to the node.
  */
-Node* makeNode(String);
+Node* createNode(String, int);
 
 /*
  * addNode: This function takes in as parameter the head node and a new node.
