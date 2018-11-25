@@ -15,3 +15,5 @@
  */
 #define MAX_CHARS 120
 #define MAX_LINES 1000
+
+int myGetLine(char[], int);

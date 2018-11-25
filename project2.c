@@ -1,11 +1,14 @@
-#include <stdio.h>
-#include "item.h"
+#include "project2.h"
 
 int main() {
 
     Node *head = NULL;
 
-    int five = -1;
+    char line[MAX_LINES];
+
+    myGetLine(line, MAX_CHARS);
+
+    printf("%s\n", line);
 
     Node temp = {5, "Orlando"};
     Node temp2 = {6, "Test"};
