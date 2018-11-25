@@ -1,9 +1,10 @@
 typedef *char String;
 
-struct node{
+typedef struct node{
   int sku;
   String product;
   float price;
 
-  struct node *next
-};
+  struct node *right;
+  struct node *left;
+}Node;
