@@ -3,10 +3,27 @@
 
 int main() {
 
-Point root = NULL;
+    Node *head = NULL;
 
+    int five = -1;
 
-  return 0;
+    Node temp = {5, "Orlando"};
+    Node temp2 = {6, "Test"};
+
+    head = addNode(head, &temp);
+
+    printf("The number is: %d\n", head->sku);
+    printf("%s\n", head->name);
+    printf("%d\n",head->quantaty );
+
+    char * test = "Testing this";
+    char str[] = "First string";
+
+    char * str1 = strtok(str, " ");
+
+    printf("%s\n", str1);
+
+    return 0;
 }
 
 /*
