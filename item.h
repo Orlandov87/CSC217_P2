@@ -3,23 +3,15 @@
  */
 typedef char* String;
 
-<<<<<<< HEAD
-=======
 /*
  * definition: Node structure of type product
  */
->>>>>>> f3516bc079f571ddd6aeb6f90a9665a6af431e9c
 typedef struct node{
   int sku;
   String name;
   float price;
   int quantaty;
 
-<<<<<<< HEAD
-  struct node *right;
-  struct node *left;
-}Node;
-=======
   struct node *next;
 }Node;
 
@@ -47,4 +39,3 @@ int removeNode(Node root, Node node);
  * printTree: This funcitons prints the tree info to Standard output.
  */
 void printTree(Node root);
->>>>>>> f3516bc079f571ddd6aeb6f90a9665a6af431e9c
