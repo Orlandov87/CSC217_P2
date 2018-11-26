@@ -1,58 +1,97 @@
 #include "project2.h"
 
-
-/*
- *
- */
-Node* addNode(Node* root, Node* current) {
+Node* addNode(Node* head, Node* newNode) {
   //TODO: Needs to fix for NULL data
-  if(root == NULL) {
-    root = (Node*)malloc(sizeof(Node));
-    root->sku = current->sku;
-    root->name = (String)malloc(sizeof(strlen(current->name)));
-    strcpy(root->name, current->name);
-    root->price = current->price;
-    root->quantaty = 1;
-    root->next = NULL;
+  int c;
+  if(head == NULL) {
+    head = newNode;
   } else {
-    Node *temp;
-    while(root->next != NULL) {
-      temp = root->next;
+    Node *current = head;
+    Node *prev = NULL;
+    while((c = compareTo(current, newNode)) < 0 && current->next != NULL) {
+      prev = current;
+      current = current->next;
+    }
+    if(c == 0) {
+      current->quantity++;
+      nodeUpdate(current, newNode);
+    } else if (current->next == NULL) {
+      current->next = newNode;
+    } else {
+      newNode->next = current;
+      prev->next = newNode;
     }
   }
-  return root;
+  return head;
+}
+
+void nodeUpdate(Node* node1, Node* node2) {
+  if(node1->sku == NULL && node2->sku != NULL) {
+    node1->sku = (String)malloc(sizeof(node2->sku));
+    strcpy(node1->sku, node2->sku);
+  }
+  if(node1->name == NULL && node2->name != NULL) {
+    node1->name = (String)malloc(sizeof(node2->name));
+    strcpy(node1->name,node2->name);
+  }
+  if(node1->price == NULL && node2->price != NULL) {
+    node1->price = (String)malloc(sizeof(node2->price));
+    strcpy(node1->price, node2->price);
+  }
+}
+
+int compareTo(Node* node1, Node* node2) {
+  if(node1->sku != NULL && node2->sku != NULL) {
+    return strcmp(node1->sku, node2->sku);
+  } else if(node1->sku == NULL && node2->sku == NULL){
+    return strcmp(node1->name, node2->name);
+  } else if(node1->sku == NULL) {
+    return -1;
+  }
+  return 1;
 }
 
 /*
  *
  */
 Node* createNode(String input, int length) {
-  //TODO: createNode: Not functional
-  char tempData[MAX_CHARS];
+  String sku;
+  String name;
+  String price;
+  //TODO: Fix
 
-  strcpy(tempData, input);
   Node* tempNode = (Node*)malloc(sizeof(Node));
-  tempNode->sku = 5;
-  tempNode->name = "Orlando";
-  tempNode->price = 10.0;
+
+  int skuIndex = isNumericString(input, 0);
+  printf("%d\n", skuIndex);
+  if(skuIndex != 0) {
+    tempNode->sku = (String)malloc(skuIndex+1);
+  }
+
   return tempNode;
 }
 
-/*
- *
- */
+String ovstrncpy(String to, String from, int start, int end) {
+  String str;
+  int i = start;
+  for(; i < end; i++) {
+    to[i] = from[i];
+  }
+  to[i] = '\0'
+  return str;
+}
+
 void printNode(Node* node) {
-  //TODO: Align text if information is missing on the node.
-  if(node->sku != 0) {
-    printf("%d ", node->sku );
+  if(node->sku != NULL) {
+    printf("%s ", node->sku );
   }
   if(node->name != NULL) {
     printf("%s ", node->name);
   }
-  if(node->price != 0.0) {
-    printf("$%0.2f ", node->price);
+  if(node->price != NULL) {
+    printf("$%s", node->price);
   }
-  printf(": %d in stock\n", node->quantaty);
+  printf(": %d in stock\n", node->quantity);
 }
 
 /*
@@ -64,4 +103,27 @@ void printList(Node* head) {
     printNode(current);
     current = current->next;
   }
+}
+
+int isNumeric(char c) {
+  if(c >= 48 && c <= 57) {
+    return 1;
+  }
+  return 0;
+}
+
+/*
+ * isNumericString returns the next space as
+ */
+int isNumericString(String cp, int startIndex) {
+  char c;
+  int i = startIndex;
+  while((c = *(cp + i)) != EOF && c != '\n' && c != ' ') {
+    if(isNumeric(c) == 0) {
+      return 0;
+    } else {
+      i++;
+    }
+  }
+  return i - startIndex;
 }
