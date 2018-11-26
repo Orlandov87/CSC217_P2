@@ -8,23 +8,24 @@ int main() {
 
     myGetLine(line, MAX_CHARS);
 
-    printf("%s\n", line);
+    printf("%s", line);
 
     Node temp = {5, "Orlando"};
-    Node temp2 = {6, "Test"};
+    //Node temp2 = {6, "Test"};
 
-    head = addNode(head, &temp);
+    printNode(&temp);
 
-    printf("The number is: %d\n", head->sku);
-    printf("%s\n", head->name);
-    printf("%d\n",head->quantaty );
+    //head = addNode(head, &temp);
 
-    char * test = "Testing this";
-    char str[] = "First string";
+    //printf("The number is: %d\n", head->sku);
+    //printf("%s\n", head->name);
+    //printf("%d\n",head->quantaty );
 
-    char * str1 = strtok(str, " ");
+    //char * test = "Testing this";
+    //char str[] = "First string";
 
-    printf("%s\n", str1);
+    //char * str1 = strtok(str, " ");
+
 
     return 0;
 }

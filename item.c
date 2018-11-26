@@ -30,3 +30,24 @@ Node* createNode(String input, int length) {
 
   return tempNode;
 }
+
+void printNode(Node* node) {
+  if(node->sku != 0) {
+    printf("%d ", node->sku );
+  }
+  if(node->name != NULL) {
+    printf("%s ", node->name);
+  }
+  if(node->price != 0.0) {
+    printf("$%f.2 ", node->price);
+  }
+  printf(": %d in stock\n", node->quantaty);
+}
+
+void printList(Node* head) {
+  Node* current = head;
+  while(current != NULL) {
+    printNode(current);
+    current = current->next;
+  }
+}

@@ -38,4 +38,6 @@ int removeNode(Node root, Node node);
 /*
  * printTree: This funcitons prints the tree info to Standard output.
  */
-void printTree(Node root);
+void printNode(Node*);
+
+void printList(Node*);
