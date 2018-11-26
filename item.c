@@ -59,19 +59,23 @@ Node* createNode(String input, int length) {
 
   Node* tempNode = (Node*)malloc(sizeof(Node));
 
-  int location = isNumericString(input, 0);
-  printf("%d\n", location);
-  if(location > 0) {
-    tempNode->sku = (String)malloc(location+1);
+  int skuIndex = isNumericString(input, 0);
+  printf("%d\n", skuIndex);
+  if(skuIndex != 0) {
+    tempNode->sku = (String)malloc(skuIndex+1);
   }
 
   return tempNode;
 }
 
 String ovstrncpy(String to, String from, int start, int end) {
-  for(int i = start; i < end; i++) {
+  String str;
+  int i = start;
+  for(; i < end; i++) {
     to[i] = from[i];
   }
+  to[i] = '\0'
+  return str;
 }
 
 void printNode(Node* node) {
@@ -95,8 +99,6 @@ void printList(Node* head) {
   }
 }
 
-
-
 int isNumeric(char c) {
   if(c >= 48 && c <= 57) {
     return 1;
@@ -104,6 +106,9 @@ int isNumeric(char c) {
   return 0;
 }
 
+/*
+ * isNumericString returns the next space as
+ */
 int isNumericString(String cp, int startIndex) {
   char c;
   int i = startIndex;
