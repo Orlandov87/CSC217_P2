@@ -7,10 +7,10 @@ typedef char* String;
  * definition: Node structure of type product
  */
 typedef struct node{
-  int sku;
+  String sku;
   String name;
-  float price;
-  int quantaty;
+  String price;
+  int quantity;
 
   struct node *next;
 }Node;
@@ -41,3 +41,11 @@ int removeNode(Node root, Node node);
 void printNode(Node*);
 
 void printList(Node*);
+
+int compareTo(Node*, Node*);
+
+void nodeUpdate(Node*, Node*);
+
+int isNumeric(char);
+
+int isNumericString(char *, int);

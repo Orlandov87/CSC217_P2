@@ -14,10 +14,12 @@ int main() {
     Node *temp1 = createNode(line, strlen(line));
     head = addNode(head, temp1);
 
+
+
     //Node temp = {218, "Orlando", 0.0};
     //Node temp2 = {6, "Test"};
 
-    printNode(head);
+    //printNode(head);
 
     //head = addNode(head, &temp);
 
@@ -29,14 +31,12 @@ int main() {
     //char str[] = "First string";
 
     //char * str1 = strtok(str, " ");
-
-
     return 0;
 }
 
 /*
-  Returns a line of chars from standard.in
-*/
+ * Returns a line of chars from standard.in
+ */
 int myGetLine(char s[], int lim){
   int c, i;
 
