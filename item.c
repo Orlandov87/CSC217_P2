@@ -1,5 +1,9 @@
 #include "project2.h"
 
+
+/*
+ *
+ */
 Node* addNode(Node* root, Node* current) {
   //TODO: Needs to fix for NULL data
   if(root == NULL) {
@@ -19,7 +23,11 @@ Node* addNode(Node* root, Node* current) {
   return root;
 }
 
+/*
+ *
+ */
 Node* createNode(String input, int length) {
+  //TODO: createNode: Not functional
   char tempData[MAX_CHARS];
 
   strcpy(tempData, input);
@@ -30,7 +38,11 @@ Node* createNode(String input, int length) {
   return tempNode;
 }
 
+/*
+ *
+ */
 void printNode(Node* node) {
+  //TODO: Align text if information is missing on the node.
   if(node->sku != 0) {
     printf("%d ", node->sku );
   }
@@ -43,6 +55,9 @@ void printNode(Node* node) {
   printf(": %d in stock\n", node->quantaty);
 }
 
+/*
+ *
+ */
 void printList(Node* head) {
   Node* current = head;
   while(current != NULL) {
