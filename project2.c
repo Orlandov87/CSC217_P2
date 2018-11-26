@@ -6,14 +6,18 @@ int main() {
 
     char line[MAX_LINES];
 
-    myGetLine(line, MAX_CHARS);
 
+
+    myGetLine(line, MAX_CHARS);
     printf("%s", line);
 
-    Node temp = {5, "Orlando"};
+    Node *temp1 = createNode(line, strlen(line));
+    head = addNode(head, temp1);
+
+    //Node temp = {218, "Orlando", 0.0};
     //Node temp2 = {6, "Test"};
 
-    printNode(&temp);
+    printNode(head);
 
     //head = addNode(head, &temp);
 
