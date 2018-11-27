@@ -3,46 +3,22 @@
 int main() {
 
     Node *head = NULL;
-
+    Node *temp = NULL;
     char line[MAX_LINES];
 
 
+    
 
     myGetLine(line, MAX_CHARS);
     //printf("%s", line);
 
-    Node *temp = createNode(line);
-
-    head = addNode(head, temp);
-
-
-    myGetLine(line, MAX_CHARS);
     temp = createNode(line);
+
     head = addNode(head, temp);
 
-    myGetLine(line, MAX_CHARS);
-    temp = createNode(line);
-    head = addNode(head, temp);
 
     printList(head);
 
-
-
-    //Node temp = {218, "Orlando", 0.0};
-    //Node temp2 = {6, "Test"};
-
-    //printNode(head);
-
-    //head = addNode(head, &temp);
-
-    //printf("The number is: %d\n", head->sku);
-    //printf("%s\n", head->name);
-    //printf("%d\n",head->quantaty );
-
-    //char * test = "Testing this";
-    //char str[] = "First string";
-
-    //char * str1 = strtok(str, " ");
     return 0;
 }
 

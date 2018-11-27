@@ -47,6 +47,10 @@ int hasString(String);
 
 int isAlpha(char);
 
+int getStartOfString(String);
+
+int getEndOfString(String);
+
 void printNode(Node*);
 
 void printList(Node*);
