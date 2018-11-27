@@ -19,7 +19,7 @@ typedef struct node{
  * makeNode: This function takes in a line of input and converts it and inputs
  * the data in a node. Then it returns a pointer to the node.
  */
-Node* createNode(String, int);
+Node* createNode(String);
 
 /*
  * addNode: This function takes in as parameter the head node and a new node.
@@ -38,6 +38,15 @@ int removeNode(Node root, Node node);
 /*
  * printTree: This funcitons prints the tree info to Standard output.
  */
+
+int subString(String, String, int, int);
+
+int isPriceString(String, int);
+
+int hasString(String);
+
+int isAlpha(char);
+
 void printNode(Node*);
 
 void printList(Node*);

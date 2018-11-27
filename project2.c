@@ -9,10 +9,22 @@ int main() {
 
 
     myGetLine(line, MAX_CHARS);
-    printf("%s", line);
+    //printf("%s", line);
 
-    Node *temp1 = createNode(line, strlen(line));
-    head = addNode(head, temp1);
+    Node *temp = createNode(line);
+
+    head = addNode(head, temp);
+
+
+    myGetLine(line, MAX_CHARS);
+    temp = createNode(line);
+    head = addNode(head, temp);
+
+    myGetLine(line, MAX_CHARS);
+    temp = createNode(line);
+    head = addNode(head, temp);
+
+    printList(head);
 
 
 
