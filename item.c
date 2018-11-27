@@ -43,6 +43,8 @@ void nodeUpdate(Node* node1, Node* node2) {
 int compareTo(Node* node1, Node* node2) {
   if(node1->sku != NULL && node2->sku != NULL) {
     return strcmp(node1->sku, node2->sku);
+  } else if(node1->name != NULL && node2->name != NULL) {
+    return strcmp(node1->name, node2->name);
   } else if(node1->sku == NULL && node2->sku == NULL){
     return strcmp(node1->name, node2->name);
   } else if(node1->sku == NULL) {
@@ -81,29 +83,39 @@ Node* createNode(String input) {
   if(hasString(input) == 1) {
     //printf("%s\n", "This has String");
     int start = getStartOfString(input);
-    int end = getEndString(input);
-    tempNode->name = (String)malloc(end-start);
+    int end = getEndOfString(input);
+    //printf("%d %d\n", start, end );
+    tempNode->name = (String)malloc((end-start)+1);
+    subString(tempNode->name, input, start, end+1);
   }
-
-  //char c;
-  //int end = strlen(input) - 1;
-  //int i = end;
-  //while((c=*(input+i) != ' ') || c == '\n' || c == '\0') {
-    //i--;
-  //}
-  //if(*(input+i) == ' ') {
-    //i++;
-  //}
-
-  //int start = i;
-
-  //int priceIndex = isPriceString(input, start);
-
-  //if(priceIndex != 0) {
-    //tempNode->price = (String)malloc(sizeof(char) * (priceIndex+1));
-    //int chars = subString(tempNode->price, input, start, start + priceIndex);
-  //}
   return tempNode;
+}
+
+int getStartOfString(String line) {
+  char c;
+  int i = 0;
+
+  while((c = *(line+i)) != '\n' && c != '\0' && c != EOF) {
+    if(isAlpha(c) == 1) {
+      return i;
+    }
+    i++;
+  }
+  return 0;
+}
+
+int getEndOfString(String line) {
+  char c;
+  int i = strlen(line)-2;
+  //printf("What i is: %d\n", i );
+
+  while((c = *(line+i)) != '\n' && c != '\0' && c != EOF && c >= 0) {
+    if(isAlpha(c) == 1) {
+      return i;
+    }
+    i--;
+  }
+  return 0;
 }
 
 int hasString(String line) {
@@ -124,7 +136,6 @@ int subString(String to, String from, int start, int end) {
 
   for(i = start; i < end; i++,j++) {
     to[j] = from[i];
-    //j++;
   }
   to[j] = '\0';
   return i - start + 1;
@@ -132,13 +143,13 @@ int subString(String to, String from, int start, int end) {
 
 void printNode(Node* node) {
   if(node->sku != NULL) {
-    printf("%s", node->sku );
+    printf("%s ", node->sku );
   }
   if(node->name != NULL) {
-    printf(" %s", node->name);
+    printf("%s ", node->name);
   }
   if(node->price != NULL) {
-    printf(" $%s", node->price);
+    printf("$%s", node->price);
   }
   printf(": %d in stock\n", node->quantity);
 }
@@ -187,24 +198,7 @@ int isPriceString(String cp, int endIndex) {
   }
   return endIndex - i;
 }
-/*
-int isPriceString(String cp, int startIndex) {
-  char c;
-  int i = startIndex;
-  int foundPoint = 0;
-  while((c = *(cp + i)) != EOF && c != '\n' && c != ' ') {
-    if (isNumeric(c) == 0) {
-      if(foundPoint == 0 && c == '.') {
-        foundPoint = 1;
-      } else {
-        return 0;
-      }
-    }
-    i++;
-  }
-  return i - startIndex;
-}
-*/
+
 /*
  * isNumericString returns the next space as
  */
