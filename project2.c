@@ -1,26 +1,26 @@
+/*
+ * Author: Orlando Vargas
+ * Purpose: Takes in a list of products and returns a list
+ *          a combined list of producst will complete information.
+ * Language: C
+ */
 #include "project2.h"
 
 int main() {
+  Node *head = NULL;
+  Node *temp = NULL;
+  char line[MAX_LINES];
 
-    Node *head = NULL;
-    Node *temp = NULL;
-    char line[MAX_LINES];
-
-
-    
-
-
-    myGetLine(line, MAX_CHARS);
-    //printf("%s", line);
-
+  while(myGetLine(line, MAX_CHARS) != 0) {
     temp = createNode(line);
-
     head = addNode(head, temp);
+  }
 
+  printList(head);
+  destroyNode(head);
+  head = NULL;
 
-    printList(head);
-
-    return 0;
+  return 0;
 }
 
 /*

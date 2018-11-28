@@ -1,4 +1,8 @@
 /*
+ * Author: Orlando Vargas
+ * Language: C
+ */
+/*
  * Libaries used
  */
 #include <stdio.h>
