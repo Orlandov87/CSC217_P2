@@ -12,7 +12,7 @@ Node* addNode(Node* head, Node* newNode) {
     if (newNode == NULL) {
         return head;
     }
-    
+
     int c;
     if (head == NULL) {
         head = newNode;
@@ -25,6 +25,9 @@ Node* addNode(Node* head, Node* newNode) {
             current = current->next;
             // printf("##%d\n", c);
         }
+
+
+        
 
         if (c == 0) {
             current->quantity = current->quantity + newNode->quantity;
