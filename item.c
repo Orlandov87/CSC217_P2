@@ -100,19 +100,11 @@ void nodeUpdate(Node* node1, Node* node2) {
  * node has a NULL for sku then it returns negative one.
  */
 int compareTo(Node* node1, Node* node2) {
-    if (node1 == NULL) {
+    if (node1 == NULL || node2 == NULL) {
         return -1;
-    } else if (node2 == NULL) {
-        return 1;
     }
     if (node1->sku != NULL && node2->sku != NULL) {
-        if (strlen(node1->sku) > strlen(node2->sku)) {
-            return 1;
-        } else if (strlen(node1->sku) < strlen(node2->sku)) {
-            return -1;
-        } else {
-            return strncmp(node1->sku, node2->sku, MAX_CHARS);
-        }
+        return strncmp(node1->sku, node2->sku, MAX_CHARS);
     } else if (node1->name != NULL && node2->name != NULL) {
         if (strncmp(node1->name, node2->name, MAX_CHARS) == 0) {
             return 0;
@@ -166,6 +158,15 @@ Node* createNode(String input) {
 }
 
 /*
+ * orderList: Orders the link list by sku numbers.
+ */
+Node* orderList(Node* head) {
+    int test;
+
+    return head;
+}
+
+/*
  * getStartOfString: Returns the integer location of the first char in the line.
  */
 int getStartOfString(String line) {
@@ -214,7 +215,7 @@ int hasString(String line) {
 }
 
 /*
- * subString:
+ * subString: Takes a string from start location to end location as index.
  */
 int subString(String to, String from, int start, int end) {
     String str;
