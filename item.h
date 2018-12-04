@@ -61,6 +61,11 @@ int hasString(String);
 int isAlpha(char);
 
 /*
+ * orderList: This function orders the list based on their sku numbers.
+ */
+Node *orderList(Node *);
+
+/*
  * getStartOfString: Returns the integer location of the first char in the line.
  */
 int getStartOfString(String);
