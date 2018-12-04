@@ -12,6 +12,7 @@ Node* addNode(Node* head, Node* newNode) {
     if (newNode == NULL) {
         return head;
     }
+    
     int c;
     if (head == NULL) {
         head = newNode;
