@@ -12,5 +12,8 @@ Node* searchSKU(Node*, String);
 /*
  * Takes in the sku, the quantaty, the tax, the list of nodes and the
  */
+void buy(String, int, Node*);
 
-void buy(String, int);
+/*
+ *
+ */
