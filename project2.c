@@ -12,8 +12,7 @@ int main() {
     char line[MAX_LINES];
 
     while (myGetLine(line, MAX_CHARS) != 0) {
-        temp = createNode(line);
-        head = addNode(head, temp);
+        head = addNode(head, createNode(line));
     }
 
     printList(head);
