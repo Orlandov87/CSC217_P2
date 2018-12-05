@@ -7,18 +7,17 @@
 #include "project2.h"
 
 int main() {
-    Node *head = NULL;
-    Node *temp = NULL;
+    Node *list = NULL;
     char line[MAX_LINES];
 
     while (myGetLine(line, MAX_CHARS) != 0) {
-        head = addNode(head, createNode(line));
+        list = addNode(list, createNode(line));
     }
 
-    printList(head);
-    destroyNode(head);
-    head = NULL;
+    printList(list);
 
+    destroyNode(list);
+    list = NULL;
     return 0;
 }
 

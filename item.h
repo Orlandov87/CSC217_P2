@@ -4,11 +4,6 @@
  */
 
 /*
- * Type Definitions
- */
-typedef char *String;
-
-/*
  * definition: Node structure of type node
  */
 typedef struct node {
