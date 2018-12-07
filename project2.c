@@ -7,13 +7,21 @@
 #include "project2.h"
 
 int main() {
-    Node *list = NULL;
+    Node* list = NULL;
     char line[MAX_LINES];
 
     while (myGetLine(line, MAX_CHARS) != 0) {
         list = addNode(list, createNode(line));
     }
 
+    printList(list);
+    printf("\n");
+    // Project 3
+    buy("325", 1, list);
+    buy("218", 4, list);
+    buy("107", 1, list);
+
+    printf("\n");
     printList(list);
 
     destroyNode(list);
