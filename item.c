@@ -233,7 +233,7 @@ int subString(String to, String from, int start, int end) {
  * printNode: prints the contents of node to standar out
  */
 void printNode(Node* node) {
-    if (node != NULL) {
+    if (node != NULL && node->quantity != 0) {
         if (node->sku != NULL) {
             printf("%s ", node->sku);
         }
