@@ -1,7 +1,7 @@
 /*
  * Author: Orlando Vargas
  * Purpose: Takes in a list of products and returns a list
- *          a combined list of producst will complete information.
+ *          a combined list of products will complete information.
  * Language: C
  */
 #include "project2.h"
