@@ -2,7 +2,7 @@
  * Author: Orlando Vargas
  * Language: C
  */
-
+typedef char *String;
 /*
  * definition: Node structure of type node
  */
