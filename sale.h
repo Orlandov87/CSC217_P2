@@ -2,7 +2,7 @@
  * Author: Orlando Vargas
  * Language: C
  */
-
+typedef char* String;
 /*
  * Search the list for the sku, if it finds it, it returns the address
  * of the node, NULL otherwise.
