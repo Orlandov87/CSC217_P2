@@ -24,6 +24,10 @@ int main() {
     printf("\n");
     printList(list);
 
+    float sub = 36.96;
+    float tax = 8.25;
+    total(sub, tax);
+
     destroyNode(list);
     list = NULL;
     return 0;

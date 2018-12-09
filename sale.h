@@ -10,10 +10,11 @@ typedef char* String;
 Node* searchSKU(Node*, String);
 
 /*
- * Takes in the sku, the quantaty, the tax, the list of nodes and the
+ * Takes in the sku, the quantity, the tax, the list of nodes and the
  */
 void buy(String, int, Node*);
 
 /*
  *
  */
+void total(float, float);
