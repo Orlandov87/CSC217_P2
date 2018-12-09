@@ -2,12 +2,7 @@ Rosin
 218 5.99
 325
 218 Rosin
-<<<<<<< HEAD
 404
 325 Violin Strings 24.99
 404 Drumsticks 7.99
 8501 French Bow 82.99
-=======
-325 Violin Strings 3.99
-102 playstation 399.99
->>>>>>> d9880c1b68059c224484ef33b12c3162fc23260d
