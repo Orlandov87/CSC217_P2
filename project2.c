@@ -17,6 +17,14 @@ int main() {
     printList(list);
     printf("\n");
     // Project 3
+
+    int quantity = 0;
+    FILE* fp = fopen("sale.txt", "r");
+    fscanf(fp,
+           "%s"
+           "%d",
+           line, &quantity);
+    fclose(fp);
     buy("325", 1, list);
     buy("218", 4, list);
     buy("107", 1, list);

@@ -57,7 +57,6 @@ Node* addNode(Node* head, Node* newNode) {
  * memory that is being used. If the Node points to another node it will call
  * destroyNode on that node.
  */
-
 void destroyNode(Node* node) {
     if (node != NULL) {
         if (node->sku != NULL) {
