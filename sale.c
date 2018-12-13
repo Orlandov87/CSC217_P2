@@ -1,3 +1,7 @@
+/*
+ * Author: Orlando Vargas
+ * Language: C 
+ */
 #include "project2.h"
 
 /*
