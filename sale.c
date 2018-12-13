@@ -44,3 +44,13 @@ void buy(String sku, int quantity, Node* list) {
                priceAsF);
     }
 }
+
+void total(float subTotal, float tax) {
+    float saleTax = subTotal * (tax / 100);
+    float total = saleTax + subTotal;
+
+    printf(
+        "\nTotal sale: $%0.2f\nSales tax(%0.2f%%): $%0.2f\nFinal price: "
+        "$%0.2f\n",
+        subTotal, tax, saleTax, total);
+}
