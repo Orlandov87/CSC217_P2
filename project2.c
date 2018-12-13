@@ -25,6 +25,7 @@ int main() {
            "%d",
            line, &quantity);
     fclose(fp);
+    
     buy("325", 1, list);
     buy("218", 4, list);
     buy("107", 1, list);
