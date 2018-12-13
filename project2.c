@@ -20,14 +20,14 @@ int main() {
 
     int quantity = 0;
     FILE* fp = fopen("sale.txt", "r");
-    fscanf(fp,
-           "%s"
-           "%d",
-           line, &quantity);
-    fclose(fp);
-    buy("325", 1, list);
-    buy("218", 4, list);
-    buy("107", 1, list);
+    while (fp != NULL || fp != EOF) {
+        fscanf(fp,
+               "%s"
+               "%d",
+               line, &quantity);
+
+        buy(line, quantity, list);
+    }
 
     printf("\n");
     printList(list);
@@ -36,6 +36,7 @@ int main() {
     float tax = 8.25;
     total(sub, tax);
 
+    fclose(fp);
     destroyNode(list);
     list = NULL;
     return 0;
