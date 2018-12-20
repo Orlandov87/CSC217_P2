@@ -2,7 +2,7 @@
  * Author: Orlando Vargas
  * Language: C
  */
-#include "project2.h"
+#include "project3.h"
 
 /*
  * addNode: Adds node to the list
