@@ -27,3 +27,4 @@
 typedef char* String;
 
 int myGetLine(char[], int);
+int myGetLinef(char[], int, FILE*);

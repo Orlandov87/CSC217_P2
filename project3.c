@@ -23,8 +23,7 @@ int main(int argc, char* argv[]) {
     printList(list);
     printf("\n");
 
-    // Project 3
-
+    // Project 3 start
     int quantity = 0;
     // FILE* fp = fopen("sale.txt", "r");
 
@@ -47,7 +46,6 @@ int main(int argc, char* argv[]) {
         }
         fclose(fp);
         total(sub, tax);
-        printf("\n");
         sub = 0;
         printf("Your salesperson: %s\n", seller);
     }
